@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Watch — AniStream</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎴</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header slim">
+    <a class="logo" href="index.html">Ani<em>Stream</em></a>
+    <button id="back-btn" class="btn-ghost">← Back</button>
+  </header>
+
+  <main class="watch-layout">
+    <section class="player-col">
+      <div class="player-shell" id="player-shell">
+        <video id="video" playsinline></video>
+
+        <div class="loading-overlay" id="loading">
+          <div class="spinner spin-lg"></div>
+          <p class="loading-text">Loading…</p>
+        </div>
+
+        <div class="error-overlay hidden" id="player-error"></div>
+
+        <button id="skip-intro" class="skip-intro hidden">Skip Intro →</button>
+
+        <div class="player-controls" id="controls">
+          <div class="controls-row">
+            <span id="time-now" class="time">0:00</span>
+            <div class="progress" id="progress">
+              <div class="progress-buffered"></div>
+              <div class="progress-played"></div>
+              <div class="progress-knob"></div>
+            </div>
+            <span id="time-total" class="time">0:00</span>
+          </div>
+          <div class="controls-row">
+            <button id="play-btn" title="Play / Pause (k)">▶</button>
+            <button id="mute-btn" title="Mute (m)">🔊</button>
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1" title="Volume">
+            <span class="spacer"></span>
+            <button id="prev-ep" title="Previous episode">⏮</button>
+            <button id="next-ep" title="Next episode">⏭</button>
+            <div class="menu-anchor">
+              <button id="cc-btn" title="Subtitles">CC</button>
+              <div class="menu hidden" id="cc-menu"></div>
+            </div>
+            <div class="menu-anchor">
+              <button id="quality-btn" title="Quality">⚙</button>
+              <div class="menu hidden" id="quality-menu"></div>
+            </div>
+            <button id="fullscreen-btn" title="Fullscreen (f)">⛶</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="watch-meta">
+        <h1 id="anime-title">Loading…</h1>
+        <div class="watch-bar">
+          <div class="lang-toggle" id="lang-toggle"></div>
+          <label class="server-label">Server
+            <select id="server-select"></select>
+          </label>
+        </div>
+        <p class="watch-hint">Space = play/pause · ←/→ = seek 5s · CC = subtitles · f = fullscreen</p>
+      </div>
+    </section>
+
+    <aside class="episodes-col">
+      <h2>Episodes <span id="ep-count" class="ep-count"></span></h2>
+      <div class="ep-list" id="ep-list"></div>
+    </aside>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
+  <script src="js/watch.js"></script>
+</body>
+</html>

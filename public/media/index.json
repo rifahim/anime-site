@@ -1,0 +1,5 @@
+{
+  "title": "Local Demo Video",
+  "description": "Place your own owned or permissioned .mp4/.m3u8 files in public/media/ to test playback without opening folders.",
+  "fileUrl": "/media/sample.mp4"
+}

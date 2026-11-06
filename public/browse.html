@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Browse — AniStream</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎴</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Ani<em>Stream</em></a>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="browse.html?cat=subbed">Subbed</a>
+      <a href="browse.html?cat=dubbed">Dubbed</a>
+      <a href="browse.html?cat=ona">ONA</a>
+      <a href="browse.html?cat=ova">OVA</a>
+      <a href="browse.html?cat=special">Specials</a>
+    </nav>
+    <div class="search-box">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input id="search-input" type="search" placeholder="Search anime…" autocomplete="off">
+    </div>
+  </header>
+
+  <main>
+    <div class="browse-controls">
+      <h2 id="browse-title">Browse</h2>
+      <label class="category-label">Category
+        <select id="category-select" class="category-select">
+          <option value="top-airing">Top Airing</option>
+          <option value="most-popular">Most Popular</option>
+          <option value="movies">Movies</option>
+          <option value="tv">TV Shows</option>
+          <option value="subbed">Subbed</option>
+          <option value="dubbed">Dubbed</option>
+          <option value="ona">ONA</option>
+          <option value="ova">OVA</option>
+          <option value="special">Specials</option>
+        </select>
+      </label>
+    </div>
+
+    <div class="grid" id="browse-grid"></div>
+    <div class="pager" id="browse-pager"></div>
+  </main>
+
+  <footer class="site-footer">
+    Data from an unofficial Hianime scraper API · demo project, not affiliated with Hianime.
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

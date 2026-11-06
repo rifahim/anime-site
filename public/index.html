@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AniStream — Watch Anime Online</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎴</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="index.html">Ani<em>Stream</em></a>
+    <nav class="main-nav">
+      <a href="browse.html?cat=top-airing">Top Airing</a>
+      <a href="browse.html?cat=movies">Movies</a>
+      <a href="browse.html?cat=tv">TV Shows</a>
+      <a href="browse.html?cat=subbed">Subbed</a>
+      <a href="browse.html?cat=dubbed">Dubbed</a>
+    </nav>
+    <div class="search-box">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+      <input id="search-input" type="search" placeholder="Search anime…" autocomplete="off">
+    </div>
+  </header>
+
+  <main>
+    <section id="search-results" class="hidden">
+      <h2 id="search-title">Results</h2>
+      <div class="grid" id="search-grid"></div>
+      <div class="pager" id="search-pager"></div>
+    </section>
+
+    <div id="rows">
+      <section class="row-section">
+        <h2>Local Library (No Folder Browsing Required) <a class="view-all" href="watch.html?dataId=local_lib">Play Local Media →</a></h2>
+        <div class="row" id="row-local"></div>
+      </section>
+      <section class="row-section">
+        <h2>Top Airing <a class="view-all" href="browse.html?cat=top-airing">View all →</a></h2>
+        <div class="row" id="row-top-airing"></div>
+      </section>
+      <section class="row-section">
+        <h2>Most Popular <a class="view-all" href="browse.html?cat=most-popular">View all →</a></h2>
+        <div class="row" id="row-popular"></div>
+      </section>
+      <section class="row-section">
+        <h2>Movies <a class="view-all" href="browse.html?cat=movies">View all →</a></h2>
+        <div class="row" id="row-movies"></div>
+      </section>
+      <section class="row-section">
+        <h2>TV Shows <a class="view-all" href="browse.html?cat=tv">View all →</a></h2>
+        <div class="row" id="row-tv"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    Data from an unofficial Hianime scraper API · demo project, not affiliated with Hianime.
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
